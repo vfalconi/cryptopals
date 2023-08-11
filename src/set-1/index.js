@@ -1,9 +1,11 @@
-const challange1 = require('./challenge-1');
-const challange2 = require('./challenge-2');
-const challange3 = require('./challenge-3');
+const challenge1 = require('./challenge-1');
+const challenge2 = require('./challenge-2');
+const challenge3 = require('./challenge-3');
+const challenge4 = require('./challenge-4');
 
 module.exports = [
-	challange1,
-	challange2,
-	challange3,
+	challenge1,
+	challenge2,
+	challenge3,
+	challenge4,
 ];
