@@ -5,14 +5,16 @@ const input = [
 	Buffer.from('686974207468652062756c6c277320657965', 'hex'),
 ];
 
-const fixedXor = (a, b) => {
-	const p = [...a];
-	const q = [...b];
-	const results = p.map((b, i) => {
-		return p[i] ^ q[i];
-	});
+const fixedXor = (p, q) => {
+	const message = q.length > p.length ? q : p;
+	const key = q.length > p.length ? p : q;
+	const c = Buffer.alloc(message.length);
 
-	return Buffer.from(results)
+	for (let i=0, j=0; i<message.length; i++, j++) {
+		c[i] = message[i] ^ key[j % key.length];
+	}
+
+	return c;
 };
 
 module.exports = {

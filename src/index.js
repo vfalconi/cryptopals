@@ -1,6 +1,4 @@
 const set1 = require('./set-1');
-const { decodeHex } = require('./set-1/challenge-1.js').tools;
-
 
 set1.forEach(solution => {
 	console.group(solution.description);
