@@ -7,8 +7,8 @@ const input = [
 const { decodeHex } = require('./challenge-1').tools;
 
 const fixedXor = (a, b) => {
-	const p = [...Buffer.from(decodeHex(a)).toJSON().data];
-	const q = [...Buffer.from(decodeHex(b)).toJSON().data];
+	const p = [...decodeHex(a).toJSON().data];
+	const q = [...decodeHex(b).toJSON().data];
 	const results = [];
 
 	for (let i = 0; i < p.length; i++) {

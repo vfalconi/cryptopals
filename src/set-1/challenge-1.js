@@ -3,16 +3,17 @@ const description = 'Convert hex to base64';
 const input = '49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d';
 
 const string2chunk = (str, length = 2) => {
-	return str.match(new RegExp(`.{1,${length}}`, 'g'));
+	const p = str.match(new RegExp(`.{1,${length}}`, 'g')) || [];
+	return p;
 };
 
 const decodeHex = (hex) => {
 	const decimalArray = string2chunk(hex).map(hstr => parseInt(hstr, 16));
-	return Buffer.from(decimalArray).toString('utf8');
+	return Buffer.from(decimalArray);
 }
 
 const hex2base64 = (hex) => {
-	return Buffer.from(decodeHex(hex)).toString('base64');
+	return decodeHex(hex).toString('base64');
 };
 
 module.exports = {

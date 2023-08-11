@@ -1,0 +1,31 @@
+const frequencies = new Map();
+
+frequencies.set('A'.charCodeAt(0), 0.0651738);
+frequencies.set('B'.charCodeAt(0), 0.0124248);
+frequencies.set('C'.charCodeAt(0), 0.0217339);
+frequencies.set('D'.charCodeAt(0), 0.0349835);
+frequencies.set('E'.charCodeAt(0), 0.1041442);
+frequencies.set('F'.charCodeAt(0), 0.0197881);
+frequencies.set('G'.charCodeAt(0), 0.0158610);
+frequencies.set('H'.charCodeAt(0), 0.0492888);
+frequencies.set('I'.charCodeAt(0), 0.0558094);
+frequencies.set('J'.charCodeAt(0), 0.0009033);
+frequencies.set('K'.charCodeAt(0), 0.0050529);
+frequencies.set('L'.charCodeAt(0), 0.0331490);
+frequencies.set('M'.charCodeAt(0), 0.0202124);
+frequencies.set('N'.charCodeAt(0), 0.0564513);
+frequencies.set('O'.charCodeAt(0), 0.0596302);
+frequencies.set('P'.charCodeAt(0), 0.0137645);
+frequencies.set('Q'.charCodeAt(0), 0.0008606);
+frequencies.set('R'.charCodeAt(0), 0.0497563);
+frequencies.set('S'.charCodeAt(0), 0.0515760);
+frequencies.set('T'.charCodeAt(0), 0.0729357);
+frequencies.set('U'.charCodeAt(0), 0.0225134);
+frequencies.set('V'.charCodeAt(0), 0.0082903);
+frequencies.set('W'.charCodeAt(0), 0.0171272);
+frequencies.set('X'.charCodeAt(0), 0.0013692);
+frequencies.set('Y'.charCodeAt(0), 0.0145984);
+frequencies.set('Z'.charCodeAt(0), 0.0007836);
+frequencies.set(' '.charCodeAt(0), 0.1918182);
+
+module.exports = frequencies;
