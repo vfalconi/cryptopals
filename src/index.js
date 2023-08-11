@@ -8,6 +8,9 @@ set1.forEach(solution => {
 				console.log(buff.toString('ascii'));
 			});
 		console.groupEnd();
+		console.group('raw input');
+			console.log(solution.input);
+		console.groupEnd();
 		console.group('human readable solution');
 			console.log(solution.answer.toString('ascii'));
 		console.groupEnd();
