@@ -4,7 +4,18 @@ const { decodeHex } = require('./set-1/challenge-1.js').tools;
 
 set1.forEach(solution => {
 	console.group(solution.description);
-	console.log(solution);
-	//console.log(decodeHex(solution.answer).toString('utf8'))
+		console.group('human readable input')
+			const input = Buffer.isBuffer(solution.input) ? [ solution.input ] : solution.input;
+			input.forEach(buff => {
+				console.log(buff.toString('utf8'));
+			});
+		console.groupEnd();
+		console.group('human readable solution');
+			console.log(solution.answer.toString('utf8'));
+		console.groupEnd();
+		console.group('raw solution');
+			console.log(solution.answer);
+		console.groupEnd();
 	console.groupEnd();
+	console.log('--- ooo ---')
 });
