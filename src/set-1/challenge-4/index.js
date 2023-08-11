@@ -1,6 +1,6 @@
 const url = 'https://www.cryptopals.com/sets/1/challenges/4';
 const description = 'Detect single-character XOR';
-const input = require('./digests');
+const input = require('./digests').map(d => Buffer.from(d, 'hex'));
 const { breakCipher, calculateFrequency } = require('../challenge-3').tools;
 
 const findEncryptedDigest = (digests) => {
