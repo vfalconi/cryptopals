@@ -39,6 +39,7 @@ module.exports = {
 	input,
 	answer: detectAES(input),
 	tools: {
+		countRepeats,
 		detectAES,
 	},
 };
