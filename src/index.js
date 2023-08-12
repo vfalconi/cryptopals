@@ -1,4 +1,4 @@
-const set1 = require('./set-1');
+const set2 = require('./set-2');
 const prettyPrintSolution = (solution) => {
 	console.group(solution.description);
 		console.group('human readable solution');
@@ -11,6 +11,6 @@ const prettyPrintSolution = (solution) => {
 	console.log('--- ooo ---')
 };
 
-set1.forEach(solution => {
+set2.forEach(solution => {
 	if (!process.env.SILENT) prettyPrintSolution(solution)
 });
