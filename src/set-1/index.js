@@ -5,6 +5,7 @@ const challenge4 = require('./challenge-4');
 const challenge5 = require('./challenge-5');
 const challenge6 = require('./challenge-6');
 const challenge7 = require('./challenge-7');
+const challenge8 = require('./challenge-8');
 
 module.exports = [
 	challenge1,
@@ -14,4 +15,5 @@ module.exports = [
 	challenge5,
 	challenge6,
 	challenge7,
+	challenge8,
 ];
