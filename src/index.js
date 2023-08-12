@@ -1,6 +1,5 @@
 const set1 = require('./set-1');
-
-set1.forEach(solution => {
+const prettyPrintSolution = (solution) => {
 	console.group(solution.description);
 		console.group('human readable solution');
 			console.log(solution.answer.toString('utf8'));
@@ -10,4 +9,8 @@ set1.forEach(solution => {
 		console.groupEnd();
 	console.groupEnd();
 	console.log('--- ooo ---')
+};
+
+set1.forEach(solution => {
+	if (!process.env.SILENT) prettyPrintSolution(solution)
 });
