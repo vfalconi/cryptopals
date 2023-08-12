@@ -12,6 +12,7 @@ const breakCipher = (cipher) => {
 	let currentMessage, currentScore;
 	let messageScore = 0;
 	let message;
+	let key;
 
 	for (let byte = 0; byte < 256; byte++) {
 		currentMessage = fixedXor(cipher, Buffer.from([ byte ]));
@@ -19,17 +20,18 @@ const breakCipher = (cipher) => {
 		if (currentScore > messageScore) {
 			message = currentMessage;
 			messageScore = currentScore;
+			key = byte
 		}
 	}
 
-	return message;
+	return { message, key };
 };
 
 module.exports = {
 	url,
 	description,
 	input,
-	answer: breakCipher(input),
+	answer: breakCipher(input).message,
 	tools: {
 		breakCipher,
 		calculateFrequency,

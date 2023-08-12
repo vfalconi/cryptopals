@@ -4,7 +4,7 @@ const input = Buffer.from(`Burning 'em, if you ain't quick and nimble
 I go crazy when I hear a cymbal`);
 const key = Buffer.from('ICE');
 
-const rotXor = (message, key) => {
+const repXor = (message, key) => {
 	const c = Buffer.alloc(message.length);
 	let keyIndex = 0;
 
@@ -24,8 +24,8 @@ module.exports = {
 	url,
 	description,
 	input,
-	answer: rotXor(input, key),
+	answer: repXor(input, key),
 	tools: {
-		rotXor
+		repXor
 	},
 };

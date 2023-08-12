@@ -9,7 +9,7 @@ const findEncryptedDigest = (digests) => {
 	let digest, currentDigest;
 
 	digests.forEach(d => {
-		currentDigest = breakCipher(d);
+		currentDigest = breakCipher(d).message;
 		currentScore = calculateFrequency(currentDigest.toString('ascii'));
 		if (currentScore > digestScore) {
 			digestScore = currentScore;
